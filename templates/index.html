@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS RESUME ANALYZER</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 40px;
+        color: white;
+        font-size: 28px;
+    }
+
+    form {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        width: 300px;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    input[type="file"] {
+        margin-bottom: 15px;
+    }
+
+    button {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #5a67d8;
+    }
+
+    .result {
+        background: white;
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .result h3 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+    }
+
+    .result p {
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .result b {
+        color: #667eea;
+    }
+</style>
+</head>
+<body>
+    <h2>Resume Analyzer</h2>
+    <form action="/uploads" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" required>
+    <button type="submit">Upload</button>
+    </form>
+
+    {% if data %}
+    <div class="result">
+        <h3>Extracted Information</h3>
+        <p><b>Name:</b> {{data['name']}} </p><br>
+        <p><b>E-mail:</b> {{data['email']}} </p><br>
+        <p><b>Phone:</b> {{data['phone']}} </p><br>
+        <p><b>Skills:</b></p><br>
+        <div>
+            {% for skill in data['skills'] %}
+            <span style="display: inline-block;
+                  background:#e0e7ff;
+                  padding: 5px 10px;
+                  margin: 3px;
+                  border-radius: 15px;">
+                  {{skill}}
+            </span>
+            {% endfor %}
+        </div>
+        <p><b>Education:</b> {{data['education']}} </p><br>
+        <p><b>Experience:</b> {{data['experience']}} </p><br>
+    </div>
+    {% endif %}
+</body>
+</html>
