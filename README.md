@@ -1,6 +1,7 @@
 # ATS-Resume-Analyzer
 AI-powered ATS Resume Analyzer using NLP (spaCy) and Regex to extract structured data from resumes (PDF/DOCX) with ATS scoring.
 
+<<<<<<< HEAD
 # ATS Resume Analyzer
 
 ![Project Banner](screenshots/banner.png) <!-- Replace with your banner image -->
@@ -9,6 +10,8 @@ AI-powered ATS Resume Analyzer using NLP (spaCy) and Regex to extract structured
 
 ---
 
+=======
+>>>>>>> 5f89aacf90b503faac7c25dab9473e43effcdcba
 ## 🔹 Project Overview
 
 Recruiters often receive hundreds of resumes per job posting. Manual screening is slow and error-prone.  
@@ -105,13 +108,17 @@ Example result page:
   "contact": {
     "name": "POORNIMA VISHWAKARMA",
     "email": "poornimavishwakarma1634@gmail.com",
+
     "phone": "9148388496",
+=======
+    "phone": " 9876543210",
     "links": "Not Found"
   },
   "education": ["BCA"],
   "skills": ["Python", "Machine Learning", "HTML", "CSS", "SQL"],
   "experience": ["2 years at XYZ Company"]
 }
+<<<<<<< HEAD
 🔹 Screenshots
 
 Home Page:
@@ -124,6 +131,8 @@ Result Page:
 
 
 Replace the screenshots/ images with your actual screenshots for better presentation.
+=======
+>>>>>>> 5f89aacf90b503faac7c25dab9473e43effcdcba
 
 🔹 License
 
@@ -134,4 +143,8 @@ This project is licensed under the MIT License.
 Poornima Vishwakarma
 Email: poornimavishwakarma1634@gmail.com
 
+<<<<<<< HEAD
 GitHub: poornimavishwakarma1634-boop
+=======
+GitHub: poornimavishwakarma1634-boop
+>>>>>>> 5f89aacf90b503faac7c25dab9473e43effcdcba
